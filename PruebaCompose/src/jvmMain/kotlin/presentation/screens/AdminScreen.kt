@@ -26,8 +26,15 @@ fun AdminScreen(
             Text(navController.currentScreen.value, style = MaterialTheme.typography.h5)
             Button(
                 onClick = {
+                    navController.navigate(Screen.CrudClientScreen.name)
+                }
+            ) {
+                Text("Gestionar Usuarios")
+            }
+            Button(
+                onClick = {
                     navController.navigate(Screen.LoginScreen.name)
-                },
+                }
             ) {
                 Text("Logout")
             }
